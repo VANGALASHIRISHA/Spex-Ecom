@@ -1,0 +1,33 @@
+<div class="conatiner-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <form action="" [formGroup]="productForm" (ngSubmit)="addNow()">
+                <div class="form-group">
+                <label for="" class="form-label">product Id</label>
+                <input type="text" name="" id="" class="form-control" formControlName="productId">
+            </div>
+             <div class="form-group">
+                <label for="" class="form-label">product Name</label>
+                <input type="text" name="" id="" class="form-control" formControlName="productName">
+            </div>
+            <div class="form-group">
+                <label for="" class="form-label">product Model</label>
+                <input type="text" name="" id="" class="form-control" formControlName="productModel">
+            </div>
+            <div class="form-group">
+                <label for="" class="form-label">product Price</label>
+                <input type="text" name="" id="" class="form-control" formControlName="productPrice">
+            </div>
+            <div class="form-group">
+                <label for="" class="form-label">product Image</label>
+                <input type="text" name="" id="" class="form-control" formControlName="productImage" >
+            </div>
+            <div class="form-group mt-2">
+                <button class="btn btn-primary" [disabled]="!productForm.valid" type="submit">Add Now</button>
+            </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>

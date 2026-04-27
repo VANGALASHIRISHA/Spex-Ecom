@@ -1,0 +1,78 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <div  class="card">
+                <div class="card-header">
+                    <img [src]="product.productImage" alt="" height="200" width="200">
+                    <h5 class="card-title">{{product.productName}}</h5>
+                </div>
+                <div class="card-body">
+                    <h5>Model:{{product.productModel}}</h5>
+                    <h6 class="badge">Price:{{product.productPrice}}</h6>
+
+                </div>
+                <div class="card-footer">
+                               <button class="btn btn-success ms-4"
+        data-bs-toggle="modal"
+        data-bs-target="#modal-BuyNow">
+  Buy Now
+</button>
+                    <button class="btn btn-primary ms-5" (click)="addNow()">Add Cart</button>
+                </div>
+            </div>
+            <div class="modal fade" id="modal-BuyNow">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1>Order Details</h1>
+                            <button type="submit" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="" #orderform="ngForm" (ngSubmit)="placeOrders()" ngNativeValidate>
+                                <div class="form-group">
+                                    <label for="" class="form-label">Name</label>
+                                    <input type="text"  required="" name="name" [(ngModel)]="username" readonly
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="form-label">Product ID</label>
+                                    <input type="text"  required="" name="id" [(ngModel)]="product.productId"
+                                        readonly class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="form-label">Product Name</label>
+                                    <input type="text" required="" name="pname"
+                                        [(ngModel)]="product.productName" readonly class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="form-label">Product Price</label>
+                                    <input type="text" required="" name="price"
+                                        [(ngModel)]="product.productPrice" readonly class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="form-label">Shipping Address</label>
+                                    <input type="text"  required="" name="address" [(ngModel)]="address"
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="form-label">Contact</label>
+                                    <input type="text"  required="" name="PhNo" [(ngModel)]="contact"
+                                        class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="form-label">EMail</label>
+                                    <input type="email"  required="" name="email" [(ngModel)]="email"
+                                        class="form-control">
+                                </div><br>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary"
+                                        data-bs-dismiss="modal" [disabled]="orderform.invalid">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="dashboard-page">
+
+  <div class="dashboard">
+
+    <!-- PRODUCTS -->
+    <div class="card bg-products">
+      <div class="icon">📦</div>
+      <div class="content">
+        <h6>Total Products</h6>
+        <h2>{{ productCount }}</h2>
+      </div>
+    </div>
+
+    <!-- ORDERS -->
+    <div class="card bg-orders">
+      <div class="icon">🧾</div>
+      <div class="content">
+        <h6>Total Orders</h6>
+        <h2>{{ orderCount ||0 }}</h2>
+      </div>
+    </div>
+
+    <!-- USERS -->
+    <div class="card bg-users">
+      <div class="icon">👥</div>
+      <div class="content">
+        <h6>Total Users</h6>
+        <h2>{{ userCount ||0}}</h2>
+      </div>
+    </div>
+
+  </div>
+
+</div>

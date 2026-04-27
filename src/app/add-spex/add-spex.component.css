@@ -1,0 +1,79 @@
+
+/* Page background */
+/* .dashboard-page {
+  min-height: 80vh;
+  background-color: navy;
+  padding: 30px;
+} */
+
+
+.container-fluid {
+  min-height: 100vh;
+  padding: 30px;
+  background: aliceblue;
+}
+
+/* Center form */
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+/* Form box (clean card) */
+.col-md-6 {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #e0e6f0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Labels */
+.form-label {
+  color: navy;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Inputs */
+.form-control {
+  border: 1px solid #cfd8dc;
+  border-radius: 6px;
+  padding: 10px;
+  background: aliceblue;
+  color: navy;
+}
+
+/* Input focus */
+.form-control:focus {
+  border-color: navy;
+  box-shadow: none;
+  outline: none;
+  background: #fff;
+}
+
+/* Button */
+.btn-primary {
+  width: 100%;
+  background: navy;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+}
+
+/* Button hover */
+.btn-primary:hover {
+  background: #001f4d;
+}
+
+/* Disabled */
+.btn-primary:disabled {
+  background: #a0aec0;
+}
+
+/* Optional spacing */
+.form-group {
+  margin-bottom: 15px;
+}

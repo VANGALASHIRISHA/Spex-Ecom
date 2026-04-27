@@ -1,0 +1,39 @@
+<div class="container-fluid my-orders">
+
+  <div class="row">
+
+    <div class="col-md-4 mb-4" *ngFor="let p of allOrders">
+
+      <div class="card">
+
+        <div class="card-header text-center">
+          <img [src]="p.productImage" height="200" width="200">
+          <h5 class="card-title mt-2">{{p.productName}}</h5>
+        </div>
+
+        <div class="card-body text-center">
+          <h6>Model: {{p.productModel}}</h6>
+
+          <p class="badge">
+            ₹ {{p.productPrice}}
+          </p>
+
+          <!-- SUCCESS STATUS -->
+          <span class="badge mt-5">
+            🎉 Order Confirmed
+          </span>
+        </div>
+
+        <div class="card-footer text-center">
+          <small class="text-muted">
+            📦 Your order is being processed
+          </small>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,59 @@
+<div class="container-fluid myc">
+  <div class="row">
+
+    <!-- SIDEBAR -->
+    <div class="col-md-2 sidebar">
+
+      <nav class="navbar navbar-dark">
+
+        <ul class="navbar-nav w-100">
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admindashboard/count">
+              <i class="fa-solid fa-house me-2"></i> Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admindashboard/add">
+              ➕ Add Products
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admindashboard/hello">
+              📦 View Products
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admindashboard/manage">
+              🛠 Manage Products
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admindashboard/orders">
+              🧾 View Orders
+            </a>
+          </li>
+
+          <li class="nav-item mt-4">
+            <a class="nav-link logout" (click)="logoutUser()">
+              🚪 Logout
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="col-md-10 main-content">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+</div>

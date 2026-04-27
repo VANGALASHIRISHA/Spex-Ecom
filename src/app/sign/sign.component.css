@@ -1,0 +1,35 @@
+/* Full Page Background */
+.center-box {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #008080; /* teal blue */
+}
+
+/* Form Card */
+.form-container {
+  width: 380px;
+  padding: 30px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+h2 {
+  color: #008080;
+  font-weight: bold;
+}
+
+/* Button */
+.btn-info {
+  background-color: #008080;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-info:hover {
+  background-color: #00a6a6;
+}

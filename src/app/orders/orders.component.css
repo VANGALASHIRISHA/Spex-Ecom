@@ -1,0 +1,121 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Force exactly 3 cards per row */
+.col-md-4 {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+}
+
+/* Card styling */
+.card {
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+    background-color:aliceblue;
+  
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Header */
+.card-header {
+    position: relative;
+    /* background: #f8f9fa; */
+    padding: 15px;
+    background-color:aliceblue;
+   
+}
+
+.card-header img {
+    display: block;
+    margin: auto;
+    object-fit: contain;
+    background-color: aliceblue;
+  
+}
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: navy;
+    margin-top: 10px;
+}
+
+.card-body h6 {
+    font-size: 14px;
+    color: navy;
+    margin-bottom: 8px;
+}
+
+/* Price styling */
+.card-body .badge {
+    font-size: 16px;
+    color: navy;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+.card-body  h5{
+    color: navy;
+}
+.btn-success{
+    background-color: navy;
+}
+.btn-primary{
+    background-color: navy;
+}
+
+
+/* Wishlist icon */
+.wishlist-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.wishlist-icon {
+    color: #555;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.wishlist-icon:hover {
+     color: red;
+    transform: scale(1.2);
+}
+
+/* Body */
+.card-body {
+    padding: 10px;
+}
+.card-footer{
+    color: navy;
+}
+
+.card-footer {
+    background: #fff;
+    border-top: none;
+    padding: 10px;
+    background-color:aliceblue;
+    color: purple;
+}
+/* small{
+    color: purple;
+} */
+ /* .card-footer .text-muted {
+  color: purple !important;
+  font-size: 14px;
+  font-weight: 500;
+} */
+ .card-footer .text-muted {
+  color: purple !important;
+  font-size: 14px;
+  font-weight: 500;
+}

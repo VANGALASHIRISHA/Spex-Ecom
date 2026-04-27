@@ -1,0 +1,31 @@
+<div class="conatiner-fluid">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let p  of product">
+
+            <div class="card">
+                <div class="card-header">
+                    <!-- <i class="fa-heart wishlist-icon" [ngClass]="product.isWishlisted ? 'fas text-danger' : 'far'"
+                        (click)="addtoNow(p)">
+                    </i> -->
+
+                    <img [src]="p.productImage" alt="" height="200" width="200">
+                    <h5 class="card-title">{{p.productName}}</h5>
+                </div>
+                <!-- <a (click)="openDetails(p.productId)"> -->
+                    <div class="card-body">
+                        <h6>Model:{{p.productModel}}</h6>
+                        <p class="badge">Price:{{p.productPrice}}</p>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="btn btn-primary" (click)="login()">View Details</button>
+                    </div>
+                 
+                <!-- </a> -->
+            </div><br>
+
+
+        </div>
+
+    </div>
+</div>

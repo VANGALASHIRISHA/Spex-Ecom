@@ -1,0 +1,93 @@
+
+.card {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+.dashboard-page {
+  min-height: 90vh;
+  background-color: #f4f6f9;
+  padding: 30px;
+}
+.dashboard {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center;
+/* background: linear-gradient(135deg, #f5f7fa, #e4ecfb); */
+
+
+
+}
+
+.card {
+  width: 260px;
+  padding: 20px;
+  border-radius: 16px;
+
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.icon {
+  font-size: 40px;
+}
+
+.content h6 {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.content h2 {
+  margin: 5px 0 0;
+  font-size: 28px;
+}
+
+
+/* .bg-products {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.bg-cart {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+.bg-wishlist {
+  background: linear-gradient(135deg, #fa709a, #fee140);
+}   */
+   
+/* =========================
+   PROFESSIONAL COLOR THEME
+   (MATCHES MODERN NAVBAR STYLE)
+========================= */
+
+/* PRODUCTS → Primary Blue */
+.bg-products {
+  background: linear-gradient(135deg, #2f80ed, #56ccf2);
+}
+
+/* CART → Dark Blue / Teal */
+.bg-cart {
+  background: linear-gradient(135deg, #1f3c88, #4facfe);
+}
+
+/* WISHLIST → Soft Indigo */
+.bg-wishlist {
+  background: linear-gradient(135deg, #5f2c82, #49a09d);
+}

@@ -1,0 +1,144 @@
+<div *ngIf="products.length === 0" class="empty-wishlist">
+   ❤️ Your Wishlist is Empty
+</div>
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-4 mb-4" *ngFor="let p of products">
+      <div class="card">
+
+        <div class="card-header text-center">
+          <img [src]="p.productImage" alt="" height="200" width="200">
+          <h5 class="card-title mt-2">{{p.productName}}</h5>
+        </div>
+
+        <div class="card-body">
+          <h6>Model: {{p.productModel}}</h6>
+          <p class="badge">
+            Price: {{p.productPrice}}
+          </p>
+        </div>
+
+        <div class="card-footer text-center">
+          
+          <button 
+            class="btn btn-success"
+            (click)="selectProduct(p)"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-BuyNow">
+            Buy Now
+          </button>
+
+          <button 
+            class="btn btn-primary ms-3" 
+            (click)="addNow(p)">
+            Add Cart
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- SINGLE MODAL OUTSIDE ngFor -->
+<div class="modal fade" id="modal-BuyNow">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h1>Order Details</h1>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <form #orderform="ngForm"
+              (ngSubmit)="placeOrders()"
+              ngNativeValidate>
+
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text"
+                   name="name"
+                   [(ngModel)]="username"
+                   readonly
+                   class="form-control"
+                   required>
+          </div>
+
+          <div class="form-group">
+            <label>Product ID</label>
+            <input type="text"
+                   name="id"
+                   [(ngModel)]="product.productId"
+                   readonly
+                   class="form-control"
+                   required>
+          </div>
+
+          <div class="form-group">
+            <label>Product Name</label>
+            <input type="text"
+                   name="pname"
+                   [(ngModel)]="product.productName"
+                   readonly
+                   class="form-control"
+                   required>
+          </div>
+
+          <div class="form-group">
+            <label>Product Price</label>
+            <input type="text"
+                   name="price"
+                   [(ngModel)]="product.productPrice"
+                   readonly
+                   class="form-control"
+                   required>
+          </div>
+
+          <div class="form-group">
+            <label>Shipping Address</label>
+            <input type="text"
+                   name="address"
+                   [(ngModel)]="address"
+                   class="form-control"
+                   required>
+          </div>
+
+          <div class="form-group">
+            <label>Contact</label>
+            <input type="text"
+                   name="PhNo"
+                   [(ngModel)]="contact"
+                   class="form-control"
+                   required>
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email"
+                   name="email"
+                   [(ngModel)]="email"
+                   class="form-control"
+                   required>
+          </div>
+
+          <br>
+
+          <button type="submit"
+                  class="btn btn-primary"
+                  data-bs-dismiss="modal"
+                  [disabled]="orderform.invalid">
+            Submit
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

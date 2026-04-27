@@ -1,0 +1,128 @@
+<div class="container-fluid">
+<div class="row">
+
+<div class="col-md-4" *ngFor="let p of products">
+
+<div class="card">
+
+<div class="card-header">
+<img [src]="p.productImage" width="200" height="200">
+<h5 class="card-title">{{p.productName}}</h5>
+</div>
+
+<div class="card-body">
+<h5>Model: {{p.productModel}}</h5>
+<h6>Price: {{p.productPrice}}</h6>
+</div>
+
+<div class="card-footer">
+
+<button
+class="btn btn-primary"
+(click)="openOrderModal(p)"
+data-bs-toggle="modal"
+data-bs-target="#orderModal">
+
+Buy Now
+
+</button>
+
+</div>
+
+</div>
+<div class="modal fade" id="orderModal">
+
+<div class="modal-dialog">
+
+<div class="modal-content">
+
+<div class="modal-header">
+<h4>Order Details</h4>
+
+<button
+type="button"
+class="btn-close"
+data-bs-dismiss="modal">
+</button>
+
+</div>
+
+
+<div class="modal-body">
+
+<img
+[src]="selectedProduct?.productImage"
+width="150">
+
+<h5>{{selectedProduct?.productName}}</h5>
+
+<p>{{selectedProduct?.productPrice}}</p>
+
+
+<form
+#orderform="ngForm"
+(ngSubmit)="placeOrders()">
+
+<input
+class="form-control mb-3"
+[(ngModel)]="username"
+name="name"
+readonly>
+
+<input
+type="text"
+name="address"
+[(ngModel)]="address"
+#addr="ngModel"
+class="form-control"
+required
+pattern="^[A-Za-z0-9,\-\s]{5,100}$"
+placeholder="Shipping Address" required>
+
+<input
+type="text"
+name="contact"
+[(ngModel)]="contact"
+#phone="ngModel"
+class="form-control"
+required
+pattern="^[6-9][0-9]{9}$"
+placeholder="Mobile Number" required>
+
+<input
+class="form-control mb-3" type="email"
+[(ngModel)]="email"
+name="email"
+placeholder="Email"
+required>
+
+<button
+class="btn btn-success"
+type="submit"
+data-bs-dismiss="modal">
+
+Submit
+
+</button>
+<div *ngIf="addr.invalid && addr.touched" style="color:red">
+Enter valid address
+</div>
+
+<div *ngIf="phone.invalid && phone.touched" style="color:red">
+Enter valid 10-digit mobile number
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>

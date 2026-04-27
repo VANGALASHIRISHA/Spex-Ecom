@@ -1,0 +1,22 @@
+<div class="conatiner-fluid">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let p of orders">
+            <div class="card">
+                <div class="card-header">
+                <img [src]="p.productImage" alt="" height="200px" width="200px">
+                    <h5 class="card-title">{{p.productName}}</h5>
+                </div>
+                <div class="card-body">
+                    <h6>Model:{{p.productModel}}</h6>
+                    <p class="badge">Price:{{p.productPrice}}</p>
+                </div>
+                <div class="card-footer">
+      <h6>Customer order placed – Pending shipment, ship to the provided address</h6>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
